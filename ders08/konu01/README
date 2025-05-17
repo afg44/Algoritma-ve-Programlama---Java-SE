@@ -1,0 +1,9 @@
+Purpose             Byte Streams                Character Streams
+Read from file	    FileInputStream	            FileReader
+Write to file	    FileOutputStream	        FileWriter
+Buffered	        BufferedInputStream, etc.   BufferedReader, etc.
+
+
+NOT: Bu package içerisinde yer alan konu01 ve konu02'deki
+java.io dosya işleme stream nesneleri ve
+java.util.stream farkli ve bagimsiz konulardir.
