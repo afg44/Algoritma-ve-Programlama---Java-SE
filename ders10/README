@@ -1,0 +1,31 @@
+Java Stream'ler
+
+Java Stream API, Java 8'de tanıtılan ve koleksiyonlar ile
+diğer veri kaynakları üzerinde fonksiyonel tarzda işlemler
+yapmayı sağlayan güçlü bir çerçevedir. Geliştiricilerin
+dönüşüm ve indirgeme işlemleriyle verileri bildirimsel
+olarak işlemelerine olanak tanır. Hem sıralı hem de paralel
+yürütmeyi desteklediği için özlü, verimli ve okunabilir kod
+için idealdir.
+
+Bir Stream işlemi genellikle üç ana aşamadan oluşur:
+
+1-Kaynak (Source): Stream'in beslendiği veri kümesidir
+(Örn: List<String>).
+
+2- Ara İşlemler (Intermediate Operations): Veriyi filtrelemek
+veya dönüştürmek için kullanılır. Bu işlemler "tembeldir"
+(lazy), yani terminal işlemi çağrılana kadar çalışmazlar.
+Kendileri de yeni bir Stream dönerler.
+
+3- Terminal İşlemi (Terminal Operation): Stream hattını
+sonlandıran ve sonucu üreten işlemdir. Bir Stream üzerinde
+terminal işlemi çağrıldıktan sonra o Stream kapanır ve tekrar
+kullanılamaz.
+
+ÖZELLİKLER
+1) Veri yapısı değildir: Akışlar veri depolamaz; bir kaynak üzerinde işlem yaparlar
+(bir koleksiyon, dizi veya G/Ç kanalı gibi)
+2) İşlevsel niteliktedir: İşlemler, kaynağı değiştirmeden sonuç üretir
+3) Tembel değerlendirme: Birçok akış işlemi yalnızca gerektiğinde yürütülür
+4) Tüketilebilir: Akışlar yalnızca bir kez gezilebilir
