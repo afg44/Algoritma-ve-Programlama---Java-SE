@@ -15,6 +15,7 @@ public class ScannerDemo {
 //		Scanner scanner = new Scanner("This is a sentence");
 		Scanner scanner = new Scanner("This-is-a-sentence");
 		scanner.useDelimiter("-");
+//		scanner.useDelimiter(" ");
 		while(scanner.hasNext())
 			System.out.println(scanner.next());
 	}

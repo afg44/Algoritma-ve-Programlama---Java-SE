@@ -18,7 +18,7 @@ public class LoopDemo {
 		}
 	
 		int[] arr = {10,20,30,40,50};
-		for(int ii : arr) {
+		for(int ii : arr) { // foreach
 			System.out.println(ii);
 		}
 		

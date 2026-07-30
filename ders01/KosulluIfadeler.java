@@ -1,6 +1,6 @@
 package ders01;
 
-//import java.lang.Math.*;
+import java.util.Scanner;
 
 public class KosulluIfadeler {
 
@@ -17,11 +17,11 @@ public class KosulluIfadeler {
 		double epsilon = 1e-9; // Tolerance level
 
 		boolean b = Math.abs(x) < epsilon;
-//		boolean b = x == 0.0;
+//		boolean b = (x == 0.0);
 		if( b == true ) {
-			System.out.println("x 0 gibi bir değer (" + x + ")");
+			System.out.println("x: 0 gibi bir değer (" + x + ")");
 		} else {
-			System.out.println("x 0'dan farkli");
+			System.out.println("x: 0'dan farkli");
 		}
 
 		double balance = 0.000001;
@@ -34,28 +34,50 @@ public class KosulluIfadeler {
 
 	public static void main2(String[] args) {
 
-		int ogrNotu = 94;
+//		int ogrNotu = 94;
+		Scanner s = new Scanner(System.in);
+		int ogrNotu = s.nextInt();
+
 		if(ogrNotu > 94)
-			System.out.println("A1");
+			System.out.println("A1 - 4.00");
 		else if(ogrNotu > 89)
-			System.out.println("A2");
+			System.out.println("A2 - 3.75");
 		else if(ogrNotu > 84)
-			System.out.println("A3");
+			System.out.println("A3 - 3.50");
 		else if(ogrNotu > 79)
-			System.out.println("B1");
+			System.out.println("B1 - 3.25");
 		else if(ogrNotu > 74)
-			System.out.println("B2");
+			System.out.println("B2 - 3.00");
 		else if(ogrNotu > 69)
-			System.out.println("B3");
+			System.out.println("B3 - 2.75");
 		else if(ogrNotu > 64)
-			System.out.println("C1");
+			System.out.println("C1 - 2.50");
 		else if(ogrNotu > 59)
-			System.out.println("C2");
+			System.out.println("C2 - 2.25");
 		else if(ogrNotu > 54)
-			System.out.println("C3");
-		else 
-			System.out.println("Diger durumlar");
-		
+			System.out.println("C3 - 2.00");
+		else if(ogrNotu > 49)
+			System.out.println("D1 - 1.75");
+		else if(ogrNotu > 44)
+			System.out.println("D2 - 1.5");
+		else if(ogrNotu > 39)
+			System.out.println("D3 - 1.25");
+		else
+			System.out.println("F Harf Notları");
+
+		if(ogrNotu > 94) {
+			System.out.println();
+		} else {
+			if(ogrNotu > 89){
+				System.out.println();
+			} else {
+				//...
+			}
+		}
+
+	}
+public static void main3(String[] a) {
+		int ogrNotu = 95;
 		switch (ogrNotu) {
 			case 100:
 			case 99:
@@ -74,15 +96,11 @@ public class KosulluIfadeler {
 				System.out.println("Dusunulmeyen durumlar");
 		}
 
-		boolean flag = true;
-		if(flag == true)
-//		if(flag)
-			System.out.println("Kosul saglandi");
 	}
 
 	public static void main(String[] args) {
-//		String day = "Monday";
-		String day = "Sunday";
+		String day = "Monday";
+//		String day = "Sunday";
 		switch (day){
 			case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
 				-> System.out.println("Haftaici");

@@ -14,19 +14,29 @@ public class DemoInputOutput {
 //        // ASCII code 0-48, 1-49, ...
 //        System.out.println("girilen rakam: " + num);
 
-
-        System.out.print("Simdi de bir sayi giriniz: ");
         InputStreamReader in = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(in);
+//        System.out.print("BufferedReader ile okumak için bir sayi giriniz: ");
 //        num = br.read();
-//        System.out.println("girilen sayi: " + num); // 10 ?
-        num = Integer.parseInt(br.readLine());
-        System.out.println("girilen sayi: " + num);
-//
-        System.out.print("Girilen sayiyi Scanner ile de okuyabiliriz: ");
-        Scanner sc = new Scanner(System.in);
-        num = sc.nextInt();
-        System.out.println("girilen sayi: " + num);
+//        System.out.println("girilen sayi: " + num);
+        // 10 ?
+        // Reads a single character.
+
+//        System.out.println("Şimdi yeniden giriniz: ");
+//        num = Integer.parseInt(br.readLine());
+//        System.out.println("girilen sayi: " + num);
+
+        System.out.println("Şimdi bir satır veri giriniz: ");
+        do{
+            num = br.read();
+            System.out.println("num: " + num);
+        } while(num != 10);
+
+
+//        System.out.print("Scanner ile girilen sayıyı okuyalım: ");
+//        Scanner sc = new Scanner(System.in);
+//        num = sc.nextInt();
+//        System.out.println("girilen sayi: " + num);
 
     }
 }
